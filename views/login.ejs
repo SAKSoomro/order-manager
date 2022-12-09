@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="contaier form-container">
+      <div class="form-wrapper">
+        <p class="form-header">Login</p>
+        <form action="/auth/login" method="post">
+          <div>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter email"
+              value="<%= typeof email != 'undefined' ? email : '' %>"
+            />
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input
+              type="text"
+              name="password"
+              id="password"
+              placeholder="Enter password"
+              value="<%= typeof password != 'undefined' ? password : '' %>"
+            />
+          </div>
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+        <p style="color: white; margin-top: 1rem">
+          new user ?
+          <span
+            ><a style="color: white" href="/auth/register">register</a>
+            here</span
+          >
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

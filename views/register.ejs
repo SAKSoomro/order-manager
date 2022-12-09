@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" type="text/css" />
+    <title>Register</title>
+  </head>
+  <body>
+    <div class="contaier form-container">
+      <div class="form-wrapper">
+        <p class="form-header">Register</p>
+        <form action="/auth/register" method="post">
+          <div>
+            <label for="name">Name</label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter name"
+              value="<%= typeof name != 'undefined' ? name : '' %>"
+            />
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter email"
+              value="<%= typeof email != 'undefined' ? email : '' %>"
+            />
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input
+              type="text"
+              name="password"
+              id="password"
+              placeholder="Enter password"
+              value="<%= typeof password!= 'undefined' ? password : '' %>"
+            />
+          </div>
+          <button type="submit" class="submit-btn">Register</button>
+        </form>
+        <p style="color: white; margin-top: 1rem">
+          already registered ?
+          <span><a style="color: white" href="/auth/login">login</a> here</span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
