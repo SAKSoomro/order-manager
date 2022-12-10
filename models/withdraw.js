@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const depositSchema = new mongoose.Schema({
+const withdrawSchema = new mongoose.Schema({
   deposit: {
     type: Number,
   },
@@ -13,4 +13,4 @@ const depositSchema = new mongoose.Schema({
     default: false,
   },
 });
-module.exports = mongoose.model("Deposit", depositSchema);
+module.exports = mongoose.model("Withdraw", withdrawSchema);
